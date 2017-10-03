@@ -59,14 +59,14 @@ import Client from 'shopify-buy/index.umd';
 
 ### Initializing the Client
 ```javascript
-import Client, {Config} from 'shopify-buy';
+import Client from 'shopify-buy';
 
-const config = new Config({
+const config = {
   domain: 'your-shop-name.myshopify.com',
   storefrontAccessToken: 'your-storefront-access-token'
-});
+};
 
-const client = new Client(config);
+const client = new Client.buildClient(config);
 ```
 
 ### Fetching Products
